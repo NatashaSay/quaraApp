@@ -1,0 +1,84 @@
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Home page</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+    <link href="../dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src={% static "js/map/map/dist/jquery.vmap.js" %}></script>
+    <script type="text/javascript" src={% static "js/map/map/dist/maps/jquery.vmap.ukraine.js" %} charset="utf-8"></script>
+
+    <script type="text/javascript" src={% static "js/details.js" %} charset="utf-8"></script>
+
+    <link rel="stylesheet" href=" {% static 'css/maincss.css'%}">
+
+  </head>
+  <body>
+    <section id="menu">
+      <nav class="navbar navbar-fixed-top">
+        <div class="container">
+        <!-- BRAND -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/home/">Quara</a>
+          </div>
+        <!-- COLLAPSIBLE NAVBAR -->
+        <div class="collapse navbar-collapse" id="alignment-example">
+          <!-- Links -->
+          <ul class="nav navbar-nav nav-center">
+            <!-- <li class="active2"><a href="/profile/">Profile</a></span></a></li> -->
+            <!-- <li class="active2"><a href="/health/">Send your health state</a></li> -->
+            <li class="active2"><a href="/monitoring/">Monitoring</a></li>
+            <li class="active2"><a href="/call/">Call</a></li>
+            <li class="active2"><a href="/mycalls/">My calls</a></li>
+            <li class="active2"><a href="/shops/">Shops</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right nav-button">
+            <li class="active2"><a href="/profile/">Welcome, <b>{{username}}</b></a></li>
+              <li class="active2"><a href="login/"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
+              <!-- <li><button type="button" class="btn btn-default nav-button" name="button"><a href="signup/">Sign up</a></button></li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <section id="map">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 vmap">
+            <div id="vmap" style="width: 725px; height: 525px;"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="pin_for_ru">Statistics</div>
+          <div id="info"></div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- <script type="text/javascript">
+    var a = "{{statistics}}";
+    alert(a);
+    </script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

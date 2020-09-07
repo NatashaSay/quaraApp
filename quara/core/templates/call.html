@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="call">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+              <form method="POST" enctype="multipart/form-data" class="call-form">
+                {% csrf_token %}
+                <fieldset class="form-group">
+                  <legend class="border-bottom mb-4">Call</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <div class="form-group">
+                  <button class="btn btn-info btn-call" type="submit">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

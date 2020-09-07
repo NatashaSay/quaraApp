@@ -1,0 +1,58 @@
+
+a{
+  color: dimgrey;
+}
+
+.navbar{
+  padding-top: 2vh;
+  height: 11vh;
+  background-color: white;
+}
+
+ul:hover{
+  background-color: white;
+}
+
+a:hover{
+  /* font-weight: 550; */
+  color: dimgrey;
+  text-decoration: underline;
+}
+
+.navbar-nav> .active2 > a:hover, .navbar-nav> .active2 > a:focus{
+  background-color: white;
+}
+
+.nav-button{
+  background-color: white;
+  /* margin-top: 1vh; */
+  height: 7.5vh;
+  margin-right: 0vw;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-width: medium;
+  border-color: orange;
+}
+
+.nav-button:hover{
+  background-color: white;
+  border-color: orange;
+}
+
+.nav-center{
+  margin-left: 28vw;
+}
+
+#main{
+  margin-top: 11vh;
+  height: 89vh;
+  background-color: #FFFAFA;
+}
+
+.signup{
+  background-color: white;
+}
+
+.log-button-1{
+  width:95%;
+}

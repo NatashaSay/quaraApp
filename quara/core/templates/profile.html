@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="profile">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-md-offset-1">
+        <p class="main-text-profile">Profile info</p>
+        <div class="image prof-image">
+          <img src="{{image}}" alt="Photo">
+        </div>
+        <div class="profile-info">
+          <p> firstname: <b>{{context.firstname}}</b></p>
+          <p> lastname: <b>{{context.lastname}}</b></p>
+          <p> age: <b>{{context.age}}</b></p>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="profile-info2">
+          <p> city: <b>{{context.city}}</b></p>
+          <p> birthdate: <b>{{context.birthdate}}</b></p>
+          <p> bio: <b>{{context.bio}}</b></p>
+          <p> district: <b>{{context.district}}</b></p>
+          <p> address: <b>{{context.address}}</b></p>
+          <p> percent: <b>{{info.emulator}}%</b></p>
+        </div>
+      </div>
+      <div class="col-md-3 col-md-offset-1 text-center">
+        <p class="main-text-profile">Actions</p>
+
+        <a href="edit/"><button class="btn btn-btn-default action" type="button" name="button">Edit profile</button></a>
+        <a href="/statistics/"><button class="btn btn-btn-default action" type="button" name="button">View statistics</button></a>
+        <a href="edit/"><button class="btn btn-btn-default action" type="button" name="button">My passes</button></a>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="footer-profile">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <p class="foot-profile">@Quara system 2020</p>
+        <p class="foot-profile">Nataliia Saichyshyna</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--
+<p>It profile page</p>
+<p><a href="edit/">Edit your profile </a></p>
+<div class="container">
+    <div class="row">
+      <div class="col-md-3 prof-actions">
+        <p class="text-center cond">Actions</p>
+        <p>you can still ...</p>
+        <ul>
+          <li><a href="/create/">Create voting</a></li>
+          <li><a href="/mypolls">View your votings</a></li>
+          <li><a href="/results/">View results</a></li>
+          <li><a href="/editprofile/">Edit your profile</a></li>
+        </ul>
+      </div>
+        <div class="col-md-4 col-md-offset-1 text-center">
+          <div class="image prof-image">
+            <img src="{{user.profile.image.url}}" alt="">
+          </div>
+          <div class="prof-info">
+            <div class="row">
+
+              <div class="col-md-6 text-right cond">
+                  <p> firstname: </p>
+                  <p> lastname: </p>
+                  <p> age: </p>
+                  <p> city: </p>
+                  <p> birthdate: </p>
+                  <p> bio: </p>
+                  <p> district: </p>
+                  <p> address: </p>
+                  <p> percent: </p>
+              </div>
+              <div class="col-md-6 text-left">
+                  <p>  {{context.firstname}}  </p>
+                  <p>  {{context.lastname}}  </p>
+                  <p>  {{context.age}}  </p>
+                  <p>  {{context.city}}  </p>
+                  <p>  {{context.birthdate}}  </p>
+                  <p>  {{context.bio}}  </p>
+                  <p>  {{context.district}}  </p>
+                  <p>  {{context.address}}  </p>
+                  <p>  {{context.percent}}  </p>
+
+              </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-3 col-md-offset-1 prof-actions">
+    <p class="text-center cond">Info</p>
+    <div class="row">
+
+      <div class="col-md-3 text-left cond">
+          <p> email: </p>
+          <p> created: </p>
+          <p> joined: </p>
+      </div>
+      <div class="col-md-9 text-left info">
+          <p class="mail">  {{info.email}}  </p>
+          <p>  {{info.count}}  </p>
+          <p>  {{info.date}}  </p>
+      </div>
+</div>
+  </div>
+  </div>
+  </div>
+
+</section> -->
+{% endblock %}

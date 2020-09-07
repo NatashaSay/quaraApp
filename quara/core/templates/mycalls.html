@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="mycalls">
+  <div class="container">
+    <div class="row">
+      {% for control in context %}
+      <div class="">
+        <div class="col-md-4">
+          <div class="thumbnail">
+            <div class="caption">
+              <div class="row">
+                <div class="col-md-8">
+                  <p>Date <b>{{ control.date }}</b></p>
+                  {% if control.reason == "t" %}
+                  <p>Reason - temperature</p>
+                  {% endif %}
+                  {% if control.reason == "th" %}
+                  <p>Reason - throatache</p>
+                  {% endif %}
+                  {% if control.reason == "h" %}
+                  <p>Reason - headache</p>
+                  {% endif %}
+                  {% if control.reason == "o" %}
+                  <p>Reason - other</p>
+                  {% endif %}
+                  <p>Comment - {{ control.comment }}</p>
+                  <p>Urgently - {{ control.urgently }}</p>
+
+
+                  <p>Cancelled - {{ control.status }}</p>
+                </div>
+                <div class="col-md-4">
+                  <div class="myblock">
+                    {% if control.status == False %}
+                      <a href="{% url 'cancellcall' pk=control.pk %}"><button type="button" name="button" class="canc btn btn-warning delete" >&nbsp;Cancell&nbsp;</button></a>
+                    {% endif %}
+                    {% if control.status == True %}
+                      <a href="#"><button type="button" name="button" class="canc btn btn-outline-warning delete" >Cancelled</button></a>
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock %}

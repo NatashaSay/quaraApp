@@ -1,0 +1,157 @@
+{% load static %}
+{% load i18n %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quara</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://bootswatch.com/3/cosmo/bootstrap.min.css">
+
+    <link rel="stylesheet" href=" {% static 'css/main.css'%}">
+
+    <link rel="stylesheet" href=" {% static 'js/animate.css'%}">
+    <script src="{% static 'js/wow.min.js'%}"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="menu">
+      <nav class="navbar navbar-fixed-top">
+        <div class="container">
+        <!-- BRAND -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#alignment-example" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#menu">Quara</a>
+          </div>
+        <!-- COLLAPSIBLE NAVBAR -->
+        <div class="collapse navbar-collapse" id="alignment-example">
+          <!-- Links -->
+          <ul class="nav navbar-nav nav-center">
+            <li class="active2"><a href="#menu">{% trans "Home" %}<span class="sr-only"></span></a></li>
+            <li class="active2"><a href="#about">{% trans "About" %}</a></li>
+            <li class="active2"><a href="#system">{% trans "System" %}</a></li>
+            <li class="active2"><a href="#contact">{% trans "Contact" %}</a></li>
+
+          </ul>
+          <ul class="nav navbar-nav navbar-right nav-button">
+              <!-- <li class="active2" class="sign"><a href="login/" >Log in</a></li> -->
+              <li><button type="button" class="btn btn-default nav-button sign" name="button"><a href="login/">{% trans "Log in" %}</a></button></li>
+
+
+
+              <li>
+                <form action="{% url 'set_language' %}" method="post" class="lang" >
+                    {% csrf_token %}
+                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                    <select name="language" class="col-md-2 select" onchange="this.form.submit()">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
+                        {% for language in languages %}
+                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                {{ language.name_local }} ({{ language.code }})
+                            </option>
+                        {% endfor %}
+                    </select>
+                    <!-- <input type="submit" value="choose" class="col-md-1 click-btn btn btn-default"> -->
+                </form>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+<section id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+
+        <div class="main-text">
+          <p>{% trans "Your quarantine manager" %}</p>
+
+          <p class="subtext">{% trans "In a pandemic, the most important thing is calm. Control everything with the help of this service." %} </p>
+        </div>
+            <button type="button" class="btn btn-default nav-button sub-button" name="button"><a href="signup/" class="sub-a">Sign up</a></button>
+      </div>
+
+      <div class="col-md-7  pull-right wow zoomIn" data-wow-duration="0.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+        <img src="{% static 'img/workflow.png' %}?version=1" alt="" class="img-responsive main-image">
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 text-center">
+        <p class="main-text">Our mission</p>
+        <p class="subtext2">We provide full control over the spread of the disease and full information. There are also great business opportunities with obtaining passes for a certain time. We are confident that using the application will reduce the spread of the pandemic and save lives.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+          <img src="{% static 'img/fogg.png' %}?version=1" alt="" class="img-responsive about-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="system">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p class="main-text">System</p>
+        <p class="subtext pull-right wow zoomIn" data-wow-duration="0.5s" data-wow-delay="0.5s" data-wow-offset="0">We are sure that there is all <br>the necessary information</p>
+
+        <p class="subtext-one pull-right wow zoomIn" data-wow-duration="0.5s" data-wow-delay="1s" data-wow-offset="0">See statistical charts to see the situation in each area</p>
+
+        <p class="subtext-two pull-right wow zoomIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-wow-offset="0">Generate special codes that will serve as passes to stores</p>
+      </div>
+      <div class="col-md-6 col-md-offset-2">
+        <div class="im">
+          <img src="{% static 'img/foggno.png' %}?version=1" alt="" class="img-responsive system-image">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p class="text-contact">Contact:</p>
+      </div>
+      <div class="col-md-8">
+        <p class="contacts"><a href="mailto:nataliia.saichyshyna@nure.ua" >nataliia.saichyshyna@nure.ua  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @nataliiaSay  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+380992885026</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  new WOW().init();
+</script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>

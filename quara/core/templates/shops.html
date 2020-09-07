@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<section id="shop">
+  <div class="container">
+    <div class="row">
+      <!-- <input type="text" name="" value=""> -->
+      {% for shop in shops %}
+      <!-- <div class=""> -->
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <!--<img src="..." alt="...">-->
+            <div class="caption">
+              <div class="row">
+                <div class="col-md-7">
+
+                  <p><b>{{ shop.title }}</b></p>
+                  <p>Address {{ shop.address }}</p>
+                  <p>Type - {{shop.type}}</p>
+                  <p>Time - {{ shop.description }}</p>
+
+                </div>
+                <div class="col-md-4">
+                  <div class="myblock">
+                    <form class="" method="post" action="{% url 'book' pk=shop.pk %}">
+                      {% csrf_token %}
+                      <input id="inputTime" type="datetime" name="inputTime" value="" class="reserv-date">
+
+                  <button type="submit" name="button" class="btn btn-warning delete reserv">Make a reservation</button>
+
+                    </form>
+
+              </div>
+                </div>
+              </div>
+
+              </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 ">
+          <div class="thumbnail thumb">
+            <div class="caption">Status
+              <div class="row">
+                {% for i in exp %}
+                  {% if i.shop.id == shop.id %}
+                  <p class="result">{{i.status}}</p>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3 ">
+          <div class="thumbnail thumb">
+            <div class="caption">Code
+              <div class="row text-center">
+                  <img src={% static "qr/one.png" %} alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </div> -->
+{% endfor %}
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+
+<section id="main-first">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+
+          <div class="main-text">
+            <p>Virus in Ukraine</p>
+
+            <p class="subtext">In a pandemic, the most important thing is calm. Control everything with the help of this service. </p>
+          </div>
+          <div class="statistic">
+            <div class="cases">
+              {{statistic.cases}}
+            </div>
+            <div class="recovered">
+              {{statistic.recovered}}
+            </div>
+            <div class="death">
+              {{statistic.death}}
+            </div>
+            <div class="desc">
+              <div class="cases1">
+              &nbsp; &nbsp;&nbsp; cases
+              </div>
+              <div class="recovered1">
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recovered
+              </div>
+              <div class="death1">
+                deaths
+              </div>
+            </div>
+            <div class="date">
+              Updated 10 06 2020
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7  pull-right wow zoomIn" data-wow-duration="0.5s" data-wow-delay="0.5s" data-wow-offset="0" data-wow-iteration="1">
+          <div class="wrap">
+            <img src="{% static 'img/virus.png' %}?version=1" alt="" class="img-responsive virus-image">
+          </div>
+      </div>
+    </div>
+
+</section>
+<section id="recommends">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="main-text2">How does the disease spread?</p>
+      </div>
+      <div class="col-md-6">
+        <p class="main-sub-text">Now it is known that COVID-19 has airborne and contact transmission routes</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+          <img src="{% static 'img/iphone1.png' %}?version=1" alt="" class="img-responsive virus-image">
+          <p class="sub">Contact transmission route prevails</p>
+          <p class="sub1">Virus usually gets on mucous membranes of nose, eyes through<br> hands and other items (napkin, gloves) after touching the objects <br>(animals, meat, fish, handles) contaminated by the discharge from <br>the respiratory system of a person who is sick or infected.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/iphone2.png' %}?version=1" alt="" class="img-responsive virus-image">
+        <p class="sub height">The virus does not circulate in the air, <br>but is transmitted from person to person</p>
+        <p class="sub1">The virus cannot travel a long distance. It exists only in the <br>droplets which a person exhales while coughing and sneezing. <br>Distance guarantees protection. It is the factor breaking an epidemic <br>chain. Thus, if you are at a distance of more than 1.5 meters it<br> is impossible to get infected even from a person who is sick.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+          <img src="{% static 'img/iphone3.png' %}?version=1" alt="" class="img-responsive virus-image">
+          <p class="sub down">How long does the virus survive on surfaces?  <br>What can kill the virus?</p>
+          <p class="sub1">The virus can survive on surfaces from 3 hours to several days. <br> The term depends on a set of conditions. For example, the type of  <br>surface, temperature and humidity of the environment. That is  <br>why it is necessary to disinfect surfaces, handles, equipment, etc.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/iphone4.png' %}?version=1" alt="" class="img-responsive virus-image">
+        <p class="sub">Is it true that the virus is transmitted only<br> to old people?</p>
+        <p class="sub1">People of any age can be infected, so everyone should follow the <br>virus protection measures. Elderly people and patients with chronic<br> diseases are at increased risk.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="footer">
+  <div class="container-fluid">
+    <div class="row text-center">
+      <div class="col-md-12 foot">
+        <p class="foot">@Quara system 2020</p>
+        <p class="foot">Nataliia Saichyshyna</p>
+        <p class="foot">nataliia.saichyshyna@nure.ua</p>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+{% endblock %}

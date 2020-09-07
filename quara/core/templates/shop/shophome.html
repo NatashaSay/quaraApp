@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section id="forshop">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Welcome to page for shops</p>
+        {% for i in exp %}
+        <div class="thumbnail">
+          <div class="row">
+            <div class="col-md-12">
+              <p>Visitor {{ i.userprofile_id }}</p>
+              <p>Expected time {{ i.expected }}</p>
+              <!-- <form class="" method="post" action="">
+                {% csrf_token %}
+              <button type="submit" class="btn btn-success btn-small" name="button">Confirm</button>
+              </form> -->
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock %}

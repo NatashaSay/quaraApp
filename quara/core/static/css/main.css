@@ -1,0 +1,166 @@
+body{
+
+}
+a{
+  color: dimgrey;
+}
+
+.navbar{
+  padding-top: 2vh;
+  height: 11vh;
+  background-color: white;
+}
+
+ul:hover{
+  background-color: white;
+}
+
+a:hover{
+  /* font-weight: 550; */
+  color: dimgrey;
+  text-decoration: underline;
+}
+
+.navbar-nav> .active2 > a:hover, .navbar-nav> .active2 > a:focus{
+  background-color: white;
+}
+
+.nav-button{
+  background-color: white;
+  /* margin-top: 1vh; */
+  height: 7.5vh;
+  margin-right: 0vw;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-width: medium;
+  border-color: orange;
+}
+
+.nav-button:hover{
+  background-color: white;
+  border-color: orange;
+}
+
+.nav-center{
+  margin-left: 28vw;
+}
+
+/* HOME */
+#home{
+  margin-top: 11vh;
+  height: 89vh;
+  background-color: white;
+}
+
+.main-text{
+  font-size: 35pt;
+  font-weight: bold;
+  padding-top: 15vh;
+  color: #615e5e;
+}
+
+.subtext{
+  font-size: 14pt;
+  padding-top: 10vh;
+  font-weight: normal;
+}
+
+.sub-button{
+  margin-top: 5vh;
+  background-color: orange;
+}
+
+.sub-button:hover{
+  background-color: white;
+  color:orange;
+}
+
+.sub-a{
+  color:white;
+}
+
+.sub-a:hover{
+  color: orange;
+}
+
+.main-image{
+  margin-left: 4vw;
+}
+
+/* ABOUT */
+#about{
+  height: 89vh;
+}
+
+.subtext2{
+  font-size: 12pt;
+  padding-top: 5vh;
+  font-weight: normal;
+}
+
+.about-image{
+  margin-top: -5vh;
+  margin-left: 15vw;
+  width: 55vw;
+  height: 70vh;
+}
+
+#system{
+  margin-top: 25vh;
+  height: 89vh;
+  background-color: #FDF5E6;
+}
+
+.system-image{
+  height: 100%;
+  width: 100%;
+}
+
+.im{
+  width: 48.2vw;
+}
+
+.subtext-one{
+  font-size: 14pt;
+  padding-top: 4vh;
+  font-weight: normal;
+  padding-left: 5vw;
+}
+
+.subtext-two{
+  font-size: 14pt;
+  padding-top: 4vh;
+  font-weight: normal;
+  padding-left: 10vw;
+}
+
+#contact{
+  height: 30vh;
+  background-color: #D8BFD8;
+}
+
+.text-contact{
+  font-size: 35pt;
+  font-weight: bold;
+  padding-top: 10vh;
+  color: white;
+}
+
+.contacts> a{
+  font-size: 15pt;
+  font-weight: bold;
+  color: white;
+}
+
+.contacts{
+  margin-top: 13.5vh;
+}
+
+
+.lang{
+  margin-right: -5vw;
+}
+
+.sign{
+  margin-left: 10vw;
+}

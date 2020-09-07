@@ -1,0 +1,321 @@
+body{
+  overflow-x: hidden;
+}
+a{
+  color: dimgrey;
+}
+
+#menu{
+  margin-bottom: 14vh;
+}
+
+.navbar{
+  padding-top: 2vh;
+  height: 11vh;
+  background-color: white;
+}
+
+ul:hover{
+  background-color: white;
+}
+
+a:hover{
+  /* font-weight: 550; */
+  color: grey;
+  text-decoration: underline;
+}
+
+.navbar-nav> .active2 > a:hover, .navbar-nav> .active2 > a:focus{
+  background-color: white;
+}
+
+.nav-button{
+  background-color: white;
+  /* margin-top: 1vh; */
+  height: 7.5vh;
+  margin-right: 0vw;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-width: medium;
+  border-color: orange;
+}
+
+.nav-button:hover{
+  background-color: white;
+  border-color: orange;
+}
+
+.nav-center{
+  margin-left: 28vw;
+}
+
+a>span{
+  color: dimgrey;
+}
+
+
+/* mainfirst */
+#main-first{
+  /* background-color: #008080; */
+  /* margin-top: 14vh; */
+  background-color:black;
+  height: 86vh;
+}
+
+
+.main-text{
+  font-size: 35pt;
+  font-weight: bold;
+  padding-top: 15vh;
+  color: white;
+}
+
+.subtext{
+  font-size: 14pt;
+  padding-top: 10vh;
+  font-weight: normal;
+  margin-bottom: 9vh;
+}
+
+.virus-image{
+  /* height: 100%;
+  width: 100%; */
+  margin-left: 7vw;
+}
+
+.wrap{
+  margin-left: 10vw;
+  height: 86vh;
+  background-color: black;
+}
+
+.statistic, .cases, .recovered, .death{
+  font-size: 30pt;
+  color: white;
+  margin-right: 3vw;
+  display: inline;
+}
+
+  .cases1, .recovered1, .death1{
+  font-size: 16pt;
+  color: white;
+  margin-right: 3vw;
+  color: grey;
+  display: inline;
+}
+
+.date{
+  margin-top: 7vh;
+  font-size: 12pt;
+  color: white;
+  margin-right: 3vw;
+  color: grey;
+  display: block;
+}
+
+#recommends{
+  height: 90vh;
+  color: white;
+}
+
+.main-text2{
+  font-size: 35pt;
+  font-weight: bold;
+  padding-top: 15vh;
+  color: black;
+}
+
+.main-sub-text{
+  font-size: 15pt;
+  font-weight: bold;
+  margin-top: 5vh;
+  padding-top: 15vh;
+  color: black;
+}
+
+.sub{
+  font-size: 15pt;
+  font-weight: bold;
+  color: black;
+  margin-top: 4vh;
+}
+
+.sub1{
+  color: dimgrey;
+}
+
+.height{
+  margin-top: -0vh;
+}
+
+.down{
+  margin-top: 7vh;
+}
+
+#footer{
+  margin-top: 80vh;
+  height: 20vh;
+  background-color: black;
+}
+
+.foot{
+  margin-top: 1vh;
+  color: white;
+}
+
+
+
+
+
+/* PROFILE */
+#profile{
+  background-color: white;
+  background-color: #008080;
+  color:white;
+  height: 76vh;
+}
+
+
+.main-text-profile{
+  color: white;
+  font-size: 20pt;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+.profile-info{
+
+  margin-top: 5vh;
+  font-size: 16pt;
+}
+
+.profile-info2{
+  margin-top: 32vh;
+  font-size: 16pt;
+
+}
+
+.action{
+  width: 13vw;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-top: 7vh;
+}
+
+.action:hover{
+  background-color: black;
+  border-width: 1px;
+  border-color: white;
+}
+
+#footer-profile{
+  height: 10vh;
+  background-color: black;
+}
+
+.foot-profile{
+  color: white;
+}
+
+/* UPDATE */
+.update{
+  width: 100%;
+}
+
+#edit{
+  height: 210vh;
+  background-color: thistle;
+}
+
+.form{
+  margin-top: 8vh;
+  background-color: white;
+}
+
+/* CALL */
+.btn-call{
+  width: 100%;
+}
+
+.call-form{
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#call{
+  background-color: thistle;
+  height: 92vh;
+}
+
+.delete-btn{
+  width: 100%;
+}
+
+.canc{
+  margin-top: 17vh;
+  margin-left: -2vw;
+}
+
+/* HEALTH */
+#health{
+  background-color: thistle;
+}
+
+.health-btn{
+  width: 100%;
+}
+
+.health-form{
+  background-color: white;
+  padding: 15px;
+  margin-top: 4vh;
+}
+
+.indicator{
+  margin-bottom: 4vh;
+  margin-left: 1.5vw;
+}
+
+#monitoring{
+  background-color: white;
+}
+
+/* shop */
+#shop{
+
+}
+
+.reserv{
+  width: 12.85vw;
+  margin-top: 4vh;
+}
+
+.reserv-date{
+  margin-top: 3vh;
+  /* margin-right:  */
+}
+
+.thumb{
+  height: 24.2vh;
+}
+
+.result{
+  padding-left: 5vw;
+  margin-top: 5vh;
+}
+
+
+/* MAP */
+#map{
+  background-color: white;
+}
+
+.vmap{
+  /* background-color: red; */
+}
+
+#pin_for_ru{
+  font-size: 25pt;
+  margin-bottom: 5vh;
+}
